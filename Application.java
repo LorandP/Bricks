@@ -13,7 +13,7 @@ public class Application {
      * @param smallBrick number of small bricks
      * @param bigBrick number of big bricks
      * @param row_length the length of the row
-     * @return
+     * @return false if the row goal lenght could not be built.
      */
     private String makeBricks(int smallBrick, int bigBrick, int row_length) {
         String True = String.valueOf(true);
@@ -31,7 +31,7 @@ public class Application {
     }
 
     /**
-     * This method takes the row length and subtracts one big brig from it in recursive way.
+     * This method takes the row length and subtracts one big brick from it in recursive way.
      * If it succeeded returns true if not then returns the remaining row length.
      * @param bigBrick number of big bricks
      * @param row_length the length of the row
@@ -39,8 +39,6 @@ public class Application {
      */
         private int bigBricksFirst(int bigBrick, int row_length) {
         int b_Brick = 5;
-        String numberAsString = Integer.toString(row_length);
-        String True = String.valueOf(true);
 
         if (bigBrick == 0 && row_length > 0)
             return row_length;
