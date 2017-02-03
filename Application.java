@@ -17,18 +17,18 @@ public class Application {
      * @return false if the row goal lenght could not be built.
      */
     private String makeBricks(int numberOfSmallBricks, int numberOfBigBricks, int rowLength) {
-        String True = String.valueOf(true);
-        String False = String.valueOf(false);
+        String stringValueOfTrue = String.valueOf(true);
+        String stringValueOfFalse = String.valueOf(false);
         int goalFromBigBricks = bigBricksFirst(numberOfBigBricks, rowLength);
         boolean goalFromSmallBricks;
         if (goalFromBigBricks == 0)
-            return True;
+            return stringValueOfTrue;
         else {
             goalFromSmallBricks = smallBricksNext(numberOfSmallBricks, goalFromBigBricks);
             if (goalFromSmallBricks == true)
-                return True;
+                return stringValueOfTrue;
         }
-        return False;
+        return stringValueOfFalse;
     }
 
     /**
